@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Box, Typography, Grid, Divider } from "@mui/material";
 import { styled } from "@mui/system";
-import { CategoryButton } from "../components";
-import { categoryData } from "../constants";
+import { CategoryButton, ProductCard } from "../components";
+import { setActiveCategory } from "../store/features/categoriesSlice";
 
 const CategoriesContainer = styled(Box)({
   padding: "32px",
@@ -19,11 +20,19 @@ const ProductsContainer = styled(Box)({
 });
 
 const Categories = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const dispatch = useDispatch();
+  const { activeCategory, list: categories } = useSelector(
+    (state) => state.categories
+  );
+  const products = useSelector((state) => state.products);
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
+    dispatch(setActiveCategory(category));
   };
+
+  const filteredProducts = activeCategory
+    ? products.filter((product) => product.category === activeCategory.id)
+    : [];
 
   return (
     <CategoriesContainer>
@@ -31,7 +40,7 @@ const Categories = () => {
         Shop By Categories
       </Typography>
       <CategoryGrid container spacing={2}>
-        {categoryData.map((category) => (
+        {categories.map((category) => (
           <Grid item xs={12} sm={6} md={4} key={category.id}>
             <CategoryButton
               category={category}
@@ -41,12 +50,18 @@ const Categories = () => {
         ))}
       </CategoryGrid>
       <Divider sx={{ my: "32px" }} />
-      {selectedCategory && (
+      {activeCategory && (
         <ProductsContainer>
           <Typography variant="h5" component="h3" gutterBottom>
-            {selectedCategory.name}
+            {activeCategory.name}
           </Typography>
-          <Typography variant="body1">Display Products Here</Typography>
+          <Grid container spacing={2}>
+            {filteredProducts.map((product) => (
+              <Grid item xs={12} sm={6} md={4} key={product.id}>
+                <ProductCard product={product} />
+              </Grid>
+            ))}
+          </Grid>
         </ProductsContainer>
       )}
     </CategoriesContainer>
