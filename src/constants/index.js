@@ -29,25 +29,32 @@ export const navLinks = [
   },
 ];
 
-export const categoryCards = [
+export const categoryData = [
   {
-    label: "Wearables",
-    image: wearables,
+    id: 1,
+    name: "Wearables",
+    description: "Discover the latest wearable devices and smart accessories.",
   },
   {
-    label: "Home Automation",
-    image: homeAutomation,
+    id: 2,
+    name: "Home Automation",
+    description: "Automate and simplify your home with smart home devices.",
   },
   {
-    label: "Personal Mobility",
-    image: personalMobility,
+    id: 3,
+    name: "Personal Mobility",
+    description:
+      "Explore innovative personal mobility solutions for easy transportation.",
   },
   {
-    label: "Health & Wellness",
-    image: healthAndWellness,
+    id: 4,
+    name: "Health & Wellness",
+    description: "Find products to support your health and well-being.",
   },
   {
-    label: "Entertainment",
-    image: entertainment,
+    id: 5,
+    name: "Entertainment",
+    description:
+      "Elevate your entertainment experience with cutting-edge technology.",
   },
 ];

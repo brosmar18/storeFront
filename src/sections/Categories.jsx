@@ -1,70 +1,55 @@
-import { Box, Typography, Button, Stack, Grid } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { CategoryCard } from "../components";
-import { categoryCards } from "../constants";
+import React, { useState } from "react";
+import { Box, Typography, Grid, Divider } from "@mui/material";
+import { styled } from "@mui/system";
+import { CategoryButton } from "../components";
+import { categoryData } from "../constants";
+
+const CategoriesContainer = styled(Box)({
+  padding: "32px",
+  backgroundColor: "#fff",
+});
+
+const CategoryGrid = styled(Grid)({
+  marginTop: "24px",
+});
+
+const ProductsContainer = styled(Box)({
+  marginTop: "32px",
+  padding: "24px",
+});
 
 const Categories = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <Stack
-      sx={{
-        padding: "50px 100px 24px",
-      }}
-      spacing={4}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100%",
-        }}
-      >
-        <Typography
-          component="h2"
-          sx={{
-            fontSize: "20px",
-            fontWeight: "500",
-            lineHeight: "28px",
-          }}
-        >
-          Shop By Categories
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: "50px",
-          }}
-        >
-          <Button variant="outlined" sx={{}}>
-            See All
-          </Button>
-          <Box>
-            <ArrowBackIosIcon
-              sx={{
-                cursor: "pointer",
-              }}
-              fontSize="medium"
+    <CategoriesContainer>
+      <Typography variant="h4" component="h2" align="center" gutterBottom>
+        Shop By Categories
+      </Typography>
+      <CategoryGrid container spacing={2}>
+        {categoryData.map((category) => (
+          <Grid item xs={12} sm={6} md={4} key={category.id}>
+            <CategoryButton
+              category={category}
+              onCategoryClick={handleCategoryClick}
             />
-            <ArrowForwardIosIcon
-              sx={{
-                cursor: "pointer",
-              }}
-              fontSize="medium"
-            />
-          </Box>
-        </Box>
-      </Box>
-      <Grid container spacing={2}>
-        {categoryCards.map((item) => (
-          <CategoryCard
-            key={item.label}
-            image={item.image}
-            label={item.label}
-          />
+          </Grid>
         ))}
-      </Grid>
-    </Stack>
+      </CategoryGrid>
+      <Divider sx={{ my: "32px" }} />
+      {selectedCategory && (
+        <ProductsContainer>
+          <Typography variant="h5" component="h3" gutterBottom>
+            {selectedCategory.name}
+          </Typography>
+          <Typography variant="body1">Display Products Here</Typography>
+        </ProductsContainer>
+      )}
+    </CategoriesContainer>
   );
 };
 

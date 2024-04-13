@@ -1,4 +1,4 @@
 import Navbar from "./Navbar";
-import CategoryCard from "./CategoryCard";
+import CategoryButton from "./CategoryButton";
 
-export { Navbar, CategoryCard };
+export { Navbar, CategoryButton };
