@@ -64,4 +64,4 @@ At this stage, all essential component tests have been implemented. Any future t
 
 #### UML
 
-![Diagram]();
+![Diagram](./src/assets/storeFrontUML.png);
