@@ -1,7 +1,16 @@
-import React from "react";
+import { Box, Stack } from "@mui/material";
+import { Navbar } from "./components";
+import { Categories } from "./sections";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <Box>
+      <Navbar />
+      <Stack>
+        <Categories />
+      </Stack>
+    </Box>
+  );
 };
 
 export default App;
