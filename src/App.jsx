@@ -1,15 +1,11 @@
-import { Box, Stack } from "@mui/material";
 import { Navbar } from "./components";
-import { Categories } from "./sections";
+import "./App.scss";
 
 const App = () => {
   return (
-    <Box>
+    <div className="app">
       <Navbar />
-      <Stack>
-        <Categories />
-      </Stack>
-    </Box>
+    </div>
   );
 };
 

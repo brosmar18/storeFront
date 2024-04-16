@@ -1,22 +1,37 @@
-export const navLinks = [
+export const navTopLinks = [
   {
-    label: "Introduce",
+    label: "Play",
     route: "#",
   },
   {
-    label: "Partner Incentives",
+    label: "Shop",
     route: "#",
   },
   {
-    label: "Promotion",
+    label: "Explore",
     route: "#",
   },
   {
-    label: "Contact",
+    label: "Help",
+    route: "#",
+  },
+];
+
+export const navLowLinks = [
+  {
+    label: "PC",
     route: "#",
   },
   {
-    label: "Frequently asked questions",
+    label: "Playstation",
+    route: "#",
+  },
+  {
+    label: "Xbox",
+    route: "#",
+  },
+  {
+    label: "Nintendo",
     route: "#",
   },
 ];

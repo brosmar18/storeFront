@@ -1,0 +1,43 @@
+@import "../../responsive.scss";
+
+.nav {
+  .nav__top {
+    background-color: var(--primary-color);
+    padding: 0.5rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include md {
+      display: none;
+    }
+
+    .nav__top-links {
+      display: flex;
+      gap: 2rem;
+      font-family: var(--font-sora);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .nav__top-btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      p {
+        font-family: var(--font-sora);
+        font-size: 12px;
+      }
+
+      button {
+        padding: 2px 8px;
+        background-color: var(--yellow-color);
+        color: var(--dark-color);
+        font-weight: 700;
+      }
+    }
+  }
+  .nav__low {
+  }
+}
