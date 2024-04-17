@@ -3,7 +3,7 @@
 .hero {
   height: 100%;
   width: 100%;
-  background-image: url(../../assets/hero.png);
+  background-image: url(../../assets/psBG.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -74,37 +74,25 @@
     margin-top: 119px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     gap: 30px;
     flex-wrap: wrap;
     padding-bottom: 30px;
+    width: 100%;
 
-    .hero__card {
-      padding: 16px;
-      background-color: var(--dark-color);
-      border-radius: 10px;
+    @include lg {
+      gap: 20px;
+    }
 
-      .img {
-        background-color: darkslategray;
-        height: 40px;
-        width: 40px;
-        margin: 0 auto;
-        margin-bottom: 8px;
-      }
+    @include md {
+      margin-top: 150px;
+      gap: 15px;
+    }
 
-      h2 {
-        font-family: var(--font-code);
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 8px;
-      }
-
-      p {
-        font-family: var(--font-sora);
-        font-size: 12px;
-        color: #95959f;
-      }
+    @include sm {
+      margin-top: 40px;
+      gap: 30px;
     }
   }
 }

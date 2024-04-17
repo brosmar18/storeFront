@@ -1,5 +1,17 @@
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import LocalPoliceIcon from "@mui/icons-material/LocalPolice";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import { HeroCard } from "../../components";
+import { heroCards } from "../../constants";
 import "./Hero.scss";
 
+const iconMapper = {
+  CloudDownloadIcon: <CloudDownloadIcon />,
+  LocalPoliceIcon: <LocalPoliceIcon />,
+  SupportAgentIcon: <SupportAgentIcon />,
+  ReviewsIcon: <ReviewsIcon />,
+};
 const Hero = () => {
   return (
     <section className="hero">
@@ -15,26 +27,14 @@ const Hero = () => {
       </div>
       {/* Cards  */}
       <div className="hero__cards">
-        <div className="hero__card">
-          <div className="img"></div>
-          <h2>Assassin's Creed Mirage</h2>
-          <p>Instant digital download</p>
-        </div>
-        <div className="hero__card">
-          <div className="img"></div>
-          <h2>Assassin's Creed Mirage</h2>
-          <p>Instant digital download</p>
-        </div>
-        <div className="hero__card">
-          <div className="img"></div>
-          <h2>Assassin's Creed Mirage</h2>
-          <p>Instant digital download</p>
-        </div>
-        <div className="hero__card">
-          <div className="img"></div>
-          <h2>Assassin's Creed Mirage</h2>
-          <p>Instant digital download</p>
-        </div>
+        {heroCards.map((item) => (
+          <HeroCard
+            key={item.id}
+            icon={iconMapper[item.icon]}
+            title={item.title}
+            subTitle={item.subTitle}
+          />
+        ))}
       </div>
     </section>
   );

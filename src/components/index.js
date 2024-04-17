@@ -1,3 +1,4 @@
 import Navbar from "./Navbar/Navbar";
+import HeroCard from "./HeroCard/HeroCard";
 
-export { Navbar };
+export { Navbar, HeroCard };

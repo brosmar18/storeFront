@@ -1,3 +1,8 @@
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import LocalPoliceIcon from "@mui/icons-material/LocalPolice";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+
 export const navTopLinks = [
   {
     label: "Play",
@@ -31,7 +36,7 @@ export const navLowLinks = [
     route: "#",
   },
   {
-    label: "Nintendo",
+    label: "Help",
     route: "#",
   },
 ];
@@ -147,5 +152,32 @@ export const productData = [
     price: 799.99,
     inventoryCount: 10,
     category: 5,
+  },
+];
+
+export const heroCards = [
+  {
+    id: 1,
+    icon: "CloudDownloadIcon",
+    title: "Download Today",
+    subTitle: "Instant digital download",
+  },
+  {
+    id: 2,
+    icon: "LocalPoliceIcon",
+    title: "Reliable & Safe",
+    subTitle: "Over 10,000 games",
+  },
+  {
+    id: 3,
+    icon: "SupportAgentIcon",
+    title: "Customer Support",
+    subTitle: "Human support 24/7",
+  },
+  {
+    id: 4,
+    icon: "ReviewsIcon",
+    title: "Trusted Reviews",
+    subTitle: "Rated 4.7, based on 539,719 reviews",
   },
 ];
