@@ -1,8 +1,14 @@
 import {
+  fatality,
+  journey,
+  kingdom,
   mariosRevenge,
   pikachu,
+  romanEmpire,
+  space,
+  supermanReturns,
   wintersWar,
-  kingdom,
+  greenArrow,
 } from "../assets/gameCovers";
 
 export const navTopLinks = [
@@ -210,6 +216,51 @@ export const trendingCardData = [
     id: 4,
     image: pikachu,
     title: "Pikachu",
+    prevPrice: "59.99",
+    price: "49.99",
+  },
+];
+
+export const popularCardData = [
+  {
+    id: 1,
+    image: fatality,
+    title: "Fatality",
+    prevPrice: "59.99",
+    price: "49.99",
+  },
+  {
+    id: 2,
+    image: greenArrow,
+    title: "Winter's War",
+    prevPrice: "59.99",
+    price: "39.99",
+  },
+  {
+    id: 3,
+    image: romanEmpire,
+    title: "Roman Empire",
+    prevPrice: "59.99",
+    price: "49.99",
+  },
+  {
+    id: 4,
+    image: space,
+    title: "Space",
+    prevPrice: "59.99",
+    price: "49.99",
+  },
+  {
+    id: 5,
+    image: supermanReturns,
+    title: "Superman Returns",
+    prevPrice: "59.99",
+    price: "49.99",
+  },
+  {
+    id: 6,
+    image: journey,
+    title: "Journey",
     prevPrice: "59.99",
     price: "49.99",
   },
