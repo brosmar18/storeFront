@@ -14,7 +14,28 @@ const Hero = () => {
         </p>
       </div>
       {/* Cards  */}
-      <div className="hero__cards"></div>
+      <div className="hero__cards">
+        <div className="hero__card">
+          <div className="img"></div>
+          <h2>Assassin's Creed Mirage</h2>
+          <p>Instant digital download</p>
+        </div>
+        <div className="hero__card">
+          <div className="img"></div>
+          <h2>Assassin's Creed Mirage</h2>
+          <p>Instant digital download</p>
+        </div>
+        <div className="hero__card">
+          <div className="img"></div>
+          <h2>Assassin's Creed Mirage</h2>
+          <p>Instant digital download</p>
+        </div>
+        <div className="hero__card">
+          <div className="img"></div>
+          <h2>Assassin's Creed Mirage</h2>
+          <p>Instant digital download</p>
+        </div>
+      </div>
     </section>
   );
 };
