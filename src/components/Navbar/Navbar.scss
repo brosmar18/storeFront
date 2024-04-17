@@ -39,5 +39,97 @@
     }
   }
   .nav__low {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 6rem;
+
+    @include md {
+      padding: 1.25rem 4rem;
+    }
+
+    @include sm {
+      padding: 1.25rem 2rem;
+    }
+  }
+
+  .logo {
+    img {
+      @include lg {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+
+  .nav__low-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include md {
+      display: none;
+    }
+
+    .nav__low-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      @include lg {
+        gap: 6px;
+      }
+
+      a {
+        font-family: var(--font-code);
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 16px;
+
+        @include lg {
+          font-size: 12px;
+        }
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+
+  .nav__low-icons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include lg {
+      gap: 16px;
+    }
+
+    .shopping {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sign-in {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      @include lg {
+        gap: 6px;
+      }
+
+      a {
+        font-family: var(--font-sora);
+        font-size: 16px;
+        font-weight: 700;
+
+        @include lg {
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

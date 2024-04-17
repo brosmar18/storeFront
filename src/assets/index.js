@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import entertainment from "./entertainment.png";
 import healthAndWellness from "./healthAndWellness.png";
 import homeAutomation from "./homeAutomation.png";
