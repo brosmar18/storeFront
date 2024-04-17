@@ -1,22 +1,78 @@
+import { useState } from "react";
 import { navLowLinks, navTopLinks } from "../../constants";
 import { logo } from "../../assets";
-import {
-  MdOutlineMonitor,
-  MdOutlineShoppingBag,
-  MdOutlineAccountCircle,
-} from "react-icons/md";
-import { IoSearchSharp } from "react-icons/io5";
-
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Box from "@mui/material/Box";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import MonitorIcon from "@mui/icons-material/Monitor";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SearchIcon from "@mui/icons-material/Search";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setDrawerOpen(open);
+  };
+
+  const list = () => (
+    <Box
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+      sx={{
+        backgroundColor: "var(--primary-color)",
+        color: "#fff",
+        height: "100vh",
+        paddingTop: "50px",
+      }}
+    >
+      {/* Close Button */}
+      <IconButton
+        onClick={toggleDrawer(false)}
+        style={{ position: "absolute", right: 8, top: 8 }}
+        sx={{ color: "white" }}
+      >
+        <CloseIcon />
+      </IconButton>
+      <List>
+        {navLowLinks.map((item) => (
+          <ListItem key={`mobile-nav-${item.label}`}>
+            <ListItemButton>
+              <ListItemIcon sx={{ color: "white" }}>
+                <MonitorIcon />
+              </ListItemIcon>
+              <ListItemText primary={item.label} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
     <nav className="nav">
-      {/* TopBar  */}
       <div className="nav__top">
         <div className="nav__top-links">
-          {navTopLinks.map((link) => (
-            <a key={`nav-top-${link.route}`} href={link.route}>
+          {navTopLinks.map((link, index) => (
+            <a key={`nav-top-${index}`} href={link.route}>
               {link.label}
             </a>
           ))}
@@ -26,30 +82,37 @@ const Navbar = () => {
           <button className="button">Shop Now</button>
         </div>
       </div>
-      {/* BottomBar  */}
       <div className="nav__low">
         <a href="#" className="logo">
           <img src={logo} alt="logo" />
         </a>
         <div className="nav__low-links">
-          {navLowLinks.map((item) => (
-            <div key={`nav-low-${item.route}`} className="nav__low-link">
-              <MdOutlineMonitor />
-              <a>{item.label}</a>
+          {navLowLinks.map((item, index) => (
+            <div key={`nav-low-${index}`} className="nav__low-link">
+              <MonitorIcon />
+              <a href="#">{item.label}</a>
             </div>
           ))}
         </div>
         <div className="nav__low-icons">
-          <IoSearchSharp />
+          <SearchIcon />
           <div className="shopping">
             <p>$0</p>
-            <MdOutlineShoppingBag />
+            <ShoppingCartIcon />
           </div>
           <div className="sign-in">
-            <MdOutlineAccountCircle />
+            <AccountCircleIcon />
             <a href="#">Sign In</a>
           </div>
         </div>
+      </div>
+      <div className="nav__mobile">
+        <Button onClick={toggleDrawer(true)} sx={{ color: "white" }}>
+          <MenuIcon />
+        </Button>
+        <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+          {list()}
+        </Drawer>
       </div>
     </nav>
   );
