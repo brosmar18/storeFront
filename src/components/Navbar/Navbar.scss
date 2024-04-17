@@ -1,6 +1,9 @@
 @import "../../responsive.scss";
 
 .nav {
+  position: fixed;
+  width: 100%;
+  background-color: var(--dark-color);
   @include sm {
     display: flex;
     align-items: center;
