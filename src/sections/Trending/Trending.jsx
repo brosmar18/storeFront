@@ -1,3 +1,5 @@
+import { TrendingCard } from "../../components";
+import { trendingCardData } from "../../constants";
 import "./Trending.scss";
 
 const Trending = () => {
@@ -16,9 +18,15 @@ const Trending = () => {
       </div>
       {/* Cards  */}
       <div className="trending__cards">
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
+        {trendingCardData.map((item) => (
+          <TrendingCard
+            key={item.title}
+            image={item.image}
+            title={item.title}
+            prevPrice={item.prevPrice}
+            price={item.price}
+          />
+        ))}
       </div>
     </section>
   );

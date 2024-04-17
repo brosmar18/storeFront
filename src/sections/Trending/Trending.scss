@@ -103,39 +103,20 @@
     margin-top: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 
     @include md {
       margin-top: 40px;
-      gap: 15px;
+      gap: 20px;
+      justify-content: space-around;
     }
 
     @include sm {
       flex-direction: column;
       justify-content: center;
       gap: 30px;
-    }
-
-    .card {
-      height: 20rem;
-      width: 40rem;
-      background-color: var(--gray-color);
-
-      @include lg {
-        height: 15rem;
-        width: 30rem;
-      }
-
-      @include md {
-        height: 10rem;
-        width: 20rem;
-      }
-
-      @include sm {
-        height: 15rem;
-        width: 100%;
-      }
     }
   }
 }

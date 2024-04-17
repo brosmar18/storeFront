@@ -1,7 +1,9 @@
-import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import LocalPoliceIcon from "@mui/icons-material/LocalPolice";
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
-import ReviewsIcon from "@mui/icons-material/Reviews";
+import {
+  mariosRevenge,
+  pikachu,
+  wintersWar,
+  kingdom,
+} from "../assets/gameCovers";
 
 export const navTopLinks = [
   {
@@ -179,5 +181,36 @@ export const heroCards = [
     icon: "ReviewsIcon",
     title: "Trusted Reviews",
     subTitle: "Rated 4.7, based on 539,719 reviews",
+  },
+];
+
+export const trendingCardData = [
+  {
+    id: 1,
+    image: mariosRevenge,
+    title: "Mario's Revenge",
+    prevPrice: "59.99",
+    price: "49.99",
+  },
+  {
+    id: 2,
+    image: wintersWar,
+    title: "Winter's War",
+    prevPrice: "59.99",
+    price: "39.99",
+  },
+  {
+    id: 3,
+    image: kingdom,
+    title: "Kingdom",
+    prevPrice: "59.99",
+    price: "49.99",
+  },
+  {
+    id: 4,
+    image: pikachu,
+    title: "Pikachu",
+    prevPrice: "59.99",
+    price: "49.99",
   },
 ];
