@@ -54,4 +54,24 @@
       grid-template-rows: repeat(4, 1fr);
     }
   }
+
+  button {
+    padding: 12px 32px;
+    background-color: var(--yellow-color);
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: var(--font-sora);
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-top: 50px;
+    cursor: pointer;
+
+    @include lg {
+      padding: 6px 16px;
+    }
+
+    @include md {
+      padding: 4px 10px;
+    }
+  }
 }

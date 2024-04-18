@@ -11,6 +11,7 @@ const Categories = () => {
           <CategoryCard category={item.category} />
         ))}
       </div>
+      <button type="button">See All</button>
     </section>
   );
 };
