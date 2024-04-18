@@ -1,0 +1,57 @@
+@import "../../responsive.scss";
+
+.categories {
+  height: 100%;
+  width: 100%;
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include lg {
+    padding: 4rem 4rem;
+    gap: 32px;
+  }
+
+  @include md {
+    padding: 4rem;
+  }
+
+  @include sm {
+    padding: 4rem 2rem;
+  }
+
+  h2 {
+    font-family: var(--font-code);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+    @include lg {
+      margin-bottom: 20px;
+    }
+  }
+
+  .categories__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+
+    @include lg {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../responsive.scss";
+
+.categoryCard {
+  background-image: url(../../assets/categoryCardBG.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7.5rem;
+  width: 100%;
+
+  p {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--font-code);
+
+    @include lg {
+      font-size: 16px;
+    }
+
+    @include md {
+      font-size: 14px;
+    }
+  }
+}

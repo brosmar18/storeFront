@@ -265,3 +265,46 @@ export const popularCardData = [
     price: "49.99",
   },
 ];
+
+export const gameCategories = [
+  {
+    id: 1,
+    category: "Action/Fighting",
+  },
+  {
+    id: 2,
+    category: "Strategy/Warfare",
+  },
+  {
+    id: 3,
+    category: "Historical Strategy",
+  },
+  {
+    id: 4,
+    category: "Sci-Fi/Exploration",
+  },
+  {
+    id: 5,
+    category: "Superhero/Action",
+  },
+  {
+    id: 6,
+    category: "Adventure/Exploration",
+  },
+  {
+    id: 7,
+    category: "Sports/Racing",
+  },
+  {
+    id: 8,
+    category: "Puzzle/Board Games",
+  },
+  {
+    id: 9,
+    category: "Simulation/Life",
+  },
+  {
+    id: 10,
+    category: "Fantasy/RPG",
+  },
+];
