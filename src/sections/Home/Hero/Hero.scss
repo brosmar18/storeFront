@@ -1,0 +1,98 @@
+@import "../../../responsive.scss";
+
+.hero {
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../assets/psBG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 15rem 6rem 0;
+
+  @include md {
+    padding: 10rem 4rem;
+  }
+
+  @include sm {
+    padding: 8rem 2rem;
+  }
+
+  .hero__text {
+    width: 624px;
+
+    @include lg {
+      width: 500px;
+    }
+
+    @include md {
+      width: 480px;
+    }
+
+    @include sm {
+      width: auto;
+      text-align: left;
+    }
+
+    h1 {
+      font-family: var(--font-sora);
+      font-size: 64px;
+      font-weight: 700;
+      margin-bottom: 16px;
+
+      @include lg {
+        font-size: 55px;
+      }
+
+      @include md {
+        font-size: 50px;
+      }
+
+      @include sm {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      color: #95959f;
+      font-size: 16px;
+      font-family: var(--font-sora);
+      line-height: 27px;
+
+      @include md {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      @include sm {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .hero__cards {
+    margin-top: 119px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    width: 100%;
+
+    @include lg {
+      gap: 20px;
+    }
+
+    @include md {
+      margin-top: 150px;
+      gap: 15px;
+    }
+
+    @include sm {
+      margin-top: 40px;
+      gap: 30px;
+    }
+  }
+}

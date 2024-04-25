@@ -1,17 +1,5 @@
-import { Navbar } from "./components";
+import { Navbar, Footer } from "./components";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import {
-  Hero,
-  Catalog,
-  Categories,
-  Deals,
-  Footer,
-  NewReleases,
-  News,
-  Popular,
-  Testimonials,
-  Trending,
-} from "./sections";
 import { Home, Shop } from "./pages";
 import "./App.scss";
 
