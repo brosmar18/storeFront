@@ -1,44 +1,31 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { FormControl, InputLabel, MenuItem } from "@mui/material";
+import { gameCategories } from "../../../constants";
+import Select from "@mui/material/Select";
 import "./ShopCategories.scss";
 
 const ShopCategories = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+
   return (
     <section className="shopCategories">
-      <div className="shopCategories__btns">
-        <Button
-          id="basic-button"
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        >
-          Categories
-        </Button>
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            "aria-labelledby": "basic-button",
-          }}
-        >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
-        </Menu>
-      </div>
+      <FormControl fullWidth>
+        <InputLabel>Categories</InputLabel>
+        <Select value={age} label="Category" onChange={handleChange}>
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          {gameCategories.map((item) => (
+            <MenuItem key={`game-categories-${item.id}`}>
+              {item.category}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
       <div className="shopCategories__products"></div>
     </section>
   );

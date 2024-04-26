@@ -32,19 +32,19 @@ export const navTopLinks = [
 
 export const navLowLinks = [
   {
-    label: "PC",
+    label: "Shop",
+    route: "/shop",
+  },
+  {
+    label: "New Releases",
     route: "#",
   },
   {
-    label: "Playstation",
+    label: "Clereance",
     route: "#",
   },
   {
-    label: "Xbox",
-    route: "#",
-  },
-  {
-    label: "Help",
+    label: "Contact Us",
     route: "#",
   },
 ];

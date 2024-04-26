@@ -1,11 +1,11 @@
-import { ShopHero, ShopCategories } from "../../sections/Shop";
+import { ShopHero, ShopProducts } from "../../sections/Shop";
 import "./Shop.scss";
 
 const Shop = () => {
   return (
     <main className="shop">
       <ShopHero />
-      <ShopCategories />
+      <ShopProducts />
     </main>
   );
 };

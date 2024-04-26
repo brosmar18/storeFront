@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { navLowLinks, navTopLinks } from "../../constants";
+import { Link } from "react-router-dom";
 import { logo } from "../../assets";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -90,7 +91,7 @@ const Navbar = () => {
           {navLowLinks.map((item, index) => (
             <div key={`nav-low-${index}`} className="nav__low-link">
               <MonitorIcon />
-              <a href="#">{item.label}</a>
+              <Link to={item.route}>{item.label}</Link>
             </div>
           ))}
         </div>
