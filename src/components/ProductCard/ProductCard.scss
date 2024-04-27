@@ -80,6 +80,7 @@
       border-radius: 10px;
       font-size: calc(14px + (12 - 10) * ((100vw - 320px) / (1600 - 320)));
       transition: background-color 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
 
       &:hover {
         background-color: var(--primary-color);

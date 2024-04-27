@@ -1,35 +1,62 @@
-import "./ShopProducts.scss";
-import { ProductCard } from "../../../components";
-import { gameCategories, productCardData } from "../../../constants";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setActiveCategory } from "../../../store/actions/categoryActions";
+import { filterProducts } from "../../../store/actions/productActions";
+import { addToCart } from "../../../store/actions/cartActions";
 import { Select, MenuItem } from "@mui/material";
+import { ProductCard } from "../../../components";
+import "./ShopProducts.scss";
 
 const ShopProducts = () => {
+  const dispatch = useDispatch();
+  const { categories, activeCategory } = useSelector(
+    (state) => state.categories
+  );
+  const { filteredProducts } = useSelector((state) => state.products);
+
+  const handleCategoryChange = (category) => {
+    dispatch(setActiveCategory(category));
+    dispatch(filterProducts(category));
+  };
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <section className="shopProducts">
-      {/* HEADER  */}
+      {/* HEADER */}
       <div className="shopProducts__heading">
         <div className="shopProducts__heading-title">
           <p className="subTitle">By Category</p>
           <h2>Our Games</h2>
         </div>
         <div className="shopProducts__categories">
-          <Select defaultValue="all" className="category-select">
+          <Select
+            value={activeCategory}
+            onChange={(e) => handleCategoryChange(e.target.value)}
+            className="category-select"
+          >
             <MenuItem value="all">Categories</MenuItem>
-            {gameCategories.map((item) => (
-              <MenuItem key={item.category}>{item.category}</MenuItem>
+            {categories.map((category) => (
+              <MenuItem key={category.id} value={category.category}>
+                {category.category}
+              </MenuItem>
             ))}
           </Select>
         </div>
       </div>
-      {/* CARDS  */}
+
+      {/* CARDS */}
       <div className="shopProducts__cards">
-        {productCardData.map((item) => (
+        {filteredProducts.map((product) => (
           <ProductCard
-            key={`product-card-${item.title}`}
-            title={item.title}
-            image={item.image}
-            description={item.description}
-            price={item.price}
+            key={`product-card-${product.title}`}
+            title={product.title}
+            image={product.image}
+            description={product.description}
+            price={product.price}
+            onAddToCart={() => handleAddToCart(product)}
           />
         ))}
       </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { navLowLinks, navTopLinks } from "../../constants";
 import { Link } from "react-router-dom";
 import { logo } from "../../assets";
+import { useSelector } from "react-redux";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
@@ -14,6 +15,7 @@ import MonitorIcon from "@mui/icons-material/Monitor";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
+import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchIcon from "@mui/icons-material/Search";
@@ -21,6 +23,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const cartCount = useSelector((state) => state.cart.items.length);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -99,7 +102,9 @@ const Navbar = () => {
           <SearchIcon />
           <div className="shopping">
             <p>$0</p>
-            <ShoppingCartIcon />
+            <Badge badgeContent={cartCount} color="error">
+              <ShoppingCartIcon />
+            </Badge>
           </div>
           <div className="sign-in">
             <AccountCircleIcon />
