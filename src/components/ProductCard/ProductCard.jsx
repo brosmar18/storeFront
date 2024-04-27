@@ -11,7 +11,10 @@ const ProductCard = () => {
         <div className="productCard__info">
           <h3>Title</h3>
           <div className="price">
-            <p>$49.99</p>
+            <p>
+              Embark on an epic journey as Geralt of Rivia, a monster hunter
+              known as a Witcher.
+            </p>
             <p>$39.99</p>
           </div>
         </div>

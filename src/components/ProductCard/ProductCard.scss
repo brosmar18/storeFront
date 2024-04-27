@@ -40,17 +40,19 @@
     h3 {
       font-size: calc(24px + (24 - 18) * ((100vw - 320px) / (1600 - 320)));
       font-family: var(--font-code);
+      margin-bottom: 8px;
     }
 
     .price {
       display: flex;
-      align-items: center;
-      gap: 8px;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
       margin-bottom: 8px;
 
       p:first-child {
         font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1600 - 320)));
-        text-decoration: line-through;
       }
 
       p:nth-child(2) {

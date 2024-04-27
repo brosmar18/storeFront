@@ -9,6 +9,14 @@ import {
   supermanReturns,
   wintersWar,
   greenArrow,
+  mortalKombat11,
+  streetFighterV,
+  tekken7,
+  crusaderKings3,
+  civilizationVI,
+  ageOfEmpires4,
+  eliteDangerous,
+  starCitizen,
 } from "../assets/gameCovers";
 
 export const navTopLinks = [
@@ -285,6 +293,153 @@ export const gameCategories = [
   },
   {
     id: 5,
+    category: "Adventure/Exploration",
+  },
+];
+
+const productCardData = [
+  // Action/Fighting
+  {
+    id: 1,
+    image: "mortalKombat11",
+    title: "Mortal Kombat 11",
+    description:
+      "Engage in brutal hand-to-hand combat with iconic characters from the Mortal Kombat universe.",
+    price: 49.99,
+    category: "Action/Fighting",
+  },
+  {
+    id: 2,
+    image: "streetFighterV",
+    title: "Street Fighter V",
+    description:
+      "Battle against players from around the world in this classic fighting game franchise.",
+    price: 19.99,
+    category: "Action/Fighting",
+  },
+  {
+    id: 3,
+    image: "tekken7",
+    title: "Tekken 7",
+    description:
+      "Master the art of combat in this fast-paced 3D fighting game.",
+    price: 39.99,
+    category: "Action/Fighting",
+  },
+
+  // Historical Strategy
+  {
+    id: 4,
+    image: "crusaderKings3",
+    title: "Crusader Kings III",
+    description:
+      "Lead your dynasty to greatness in this grand strategy game set in the Middle Ages.",
+    price: 49.99,
+    category: "Historical Strategy",
+  },
+  {
+    id: 5,
+    image: "civilizationVI",
+    title: "Civilization VI",
+    description:
+      "Build and expand your empire, and guide your civilization from ancient times to the space age.",
+    price: 59.99,
+    category: "Historical Strategy",
+  },
+  {
+    id: 6,
+    image: "ageOfEmpires4",
+    title: "Age of Empires IV",
+    description:
+      "Command mighty civilizations and engage in epic real-time strategy battles.",
+    price: 49.99,
+    category: "Historical Strategy",
+  },
+
+  // Sci-Fi/Exploration
+  {
+    id: 7,
+    image: "noMansSky",
+    title: "No Man's Sky",
+    description:
+      "Explore a vast procedurally generated universe filled with unique planets and lifeforms.",
+    price: 59.99,
+    category: "Sci-Fi/Exploration",
+  },
+  {
+    id: 8,
+    image: "eliteDangerous",
+    title: "Elite Dangerous",
+    description:
+      "Embark on a spacefaring adventure in a realistic 1:1 scale Milky Way galaxy.",
+    price: 29.99,
+    category: "Sci-Fi/Exploration",
+  },
+  {
+    id: 9,
+    image: "starCitizen",
+    title: "Star Citizen",
+    description:
+      "Experience a groundbreaking space sim with unparalleled immersion and player interaction.",
+    price: 44.99,
+    category: "Sci-Fi/Exploration",
+  },
+
+  // Superhero/Action
+  {
+    id: 10,
+    image: "spidermanMilesMorales",
+    title: "Spider-Man: Miles Morales",
+    description:
+      "Swing through the streets of New York City as Miles Morales, the new Spider-Man.",
+    price: 49.99,
+    category: "Superhero/Action",
+  },
+  {
+    id: 11,
+    image: "batmanArkhamKnight",
+    title: "Batman: Arkham Knight",
+    description:
+      "Become the Dark Knight and protect Gotham City from the Scarecrow and the Arkham Knight.",
+    price: 19.99,
+    category: "Superhero/Action",
+  },
+  {
+    id: 12,
+    image: "marvelAvengers",
+    title: "Marvel's Avengers",
+    description:
+      "Assemble your team of Earth's Mightiest Heroes and defend the world from threats.",
+    price: 39.99,
+    category: "Superhero/Action",
+  },
+
+  // Adventure/Exploration
+  {
+    id: 13,
+    image: "horizonZeroDawn",
+    title: "Horizon Zero Dawn",
+    description:
+      "Discover a captivating post-apocalyptic world ruled by machines, where nature has reclaimed the ruins of the past.",
+    price: 29.99,
+    category: "Adventure/Exploration",
+  },
+  {
+    id: 14,
+    image: "theWitcher3",
+    title: "The Witcher 3: Wild Hunt",
+    description:
+      "Embark on an epic journey as Geralt of Rivia, a monster hunter known as a Witcher.",
+    price: 39.99,
+    category: "Adventure/Exploration",
+  },
+  {
+    id: 15,
+    image: "assassinsCreedValhalla",
+    title: "Assassin's Creed Valhalla",
+    description:
+      "Become a Viking raider and lead your clan to glory in a vast open world set in the Viking Age.",
+    price: 59.99,
     category: "Adventure/Exploration",
   },
 ];

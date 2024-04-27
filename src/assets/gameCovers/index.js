@@ -11,6 +11,15 @@ import supermanReturns from "./supermanReturns.png";
 import thronesOfTheForsaken from "./thronesOfTheForsaken.png";
 import wintersWar from "./wintersWar.png";
 import greenArrow from "./greenArrow.png";
+import mortalKombat11 from "./mortalKombat11.png";
+import streetFighterV from "./streetFighterV.png";
+import tekken7 from "./tekken7.png";
+import crusaderKings3 from "./crusaderKings3.png";
+import civilizationVI from "./civilizationVI.png";
+import ageOfEmpires4 from "./ageOfEmpires4.png";
+import noMansSky from "./noMansSky.png";
+import eliteDangerous from "./eliteDangerous.png";
+import starCitizen from "./starCitizen.png";
 
 export {
   fatality,
@@ -26,4 +35,13 @@ export {
   thronesOfTheForsaken,
   wintersWar,
   greenArrow,
+  mortalKombat11,
+  streetFighterV,
+  tekken7,
+  crusaderKings3,
+  civilizationVI,
+  ageOfEmpires4,
+  noMansSky,
+  eliteDangerous,
+  starCitizen,
 };
