@@ -14,7 +14,7 @@ const ShopProducts = () => {
         </div>
         <div className="shopProducts__categories">
           <Select defaultValue="all" className="category-select">
-            <MenuItem value="all">All Categories</MenuItem>
+            <MenuItem value="all">Categories</MenuItem>
             {gameCategories.map((item) => (
               <MenuItem key={item.category}>{item.category}</MenuItem>
             ))}
