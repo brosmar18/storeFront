@@ -65,3 +65,6 @@ At this stage, all essential component tests have been implemented. Any future t
 #### UML
 
 ![Diagram](./src/assets/storeFrontUML.png);
+
+### Figma Design 
+![Design File](./src/assets/figmaDesign/gameSiteDesign.png)
