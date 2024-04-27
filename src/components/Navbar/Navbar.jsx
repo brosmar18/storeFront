@@ -24,6 +24,7 @@ import "./Navbar.scss";
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const cartCount = useSelector((state) => state.cart.items.length);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -101,7 +102,7 @@ const Navbar = () => {
         <div className="nav__low-icons">
           <SearchIcon />
           <div className="shopping">
-            <p>$0</p>
+            <p>${totalPrice?.toFixed(2) ?? "0.00"}</p>
             <Badge badgeContent={cartCount} color="error">
               <ShoppingCartIcon />
             </Badge>
