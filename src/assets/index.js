@@ -1,15 +1,4 @@
-import logo from "./logo.png";
-import entertainment from "./entertainment.png";
-import healthAndWellness from "./healthAndWellness.png";
-import homeAutomation from "./homeAutomation.png";
-import personalMobility from "./personalMobility.png";
-import wearables from "./wearables.png";
+import logo from "./logo.svg";
+import gameCollection from "./gameCollection.png";
 
-export {
-  logo,
-  wearables,
-  entertainment,
-  healthAndWellness,
-  homeAutomation,
-  personalMobility,
-};
+export { logo, gameCollection };

@@ -1,0 +1,18 @@
+@import "../../../responsive.scss";
+
+.shopCategories {
+  height: 100%;
+  width: 100%;
+  padding: 4rem 6rem;
+
+  @include md {
+    padding: 4rem;
+  }
+
+  @include sm {
+    padding: 4rem 2rem;
+  }
+
+  .shopCategories__btns {
+  }
+}

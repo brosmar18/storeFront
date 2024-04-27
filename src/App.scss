@@ -1,0 +1,31 @@
+@import "./responsive.scss";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+
+  @include md {
+    padding: 4rem;
+  }
+
+  @include sm {
+    padding: 4rem 2rem;
+  }
+}
+
+.app {
+  background-color: var(--dark-color);
+  min-height: 100vh;
+  width: 100%;
+}

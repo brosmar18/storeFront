@@ -1,0 +1,128 @@
+// ShopProducts.scss
+@import "../../../responsive.scss";
+
+.shopProducts {
+  height: 100%;
+  width: 100%;
+  padding: 4rem 6rem;
+
+  @include md {
+    padding: 4rem;
+  }
+
+  @include sm {
+    padding: 4rem 2rem;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .shopProducts__heading-title {
+      flex: 1;
+      .subTitle {
+        color: var(--secondary-color);
+        font-size: 13px;
+        font-weight: 900;
+        line-height: 18px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+
+        @include lg {
+          font-size: 12px;
+        }
+
+        @include md {
+          margin-bottom: 4px;
+        }
+      }
+
+      h2 {
+        font-family: var(--font-code);
+        font-size: 48px;
+        font-weight: 700;
+
+        @include lg {
+          font-size: 35px;
+        }
+
+        @include md {
+          font-size: 30px;
+        }
+      }
+    }
+    .shopProducts__categories {
+      flex: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .category-select {
+        position: relative;
+        padding: 2px 16px;
+        background-color: var(--secondary-color);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.3)
+          );
+          transform: skewX(-30deg);
+          transition: left 0.5s;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+
+          &::before {
+            left: 100%;
+          }
+        }
+
+        &:active {
+          transform: scale(0.95);
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        @include lg {
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include md {
+      margin-top: 40px;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    @include sm {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+}
