@@ -15,6 +15,7 @@ import {
   crusaderKings3,
   civilizationVI,
   ageOfEmpires4,
+  noMansSky,
   eliteDangerous,
   starCitizen,
   spidermanMilesMorales,
@@ -303,11 +304,11 @@ export const gameCategories = [
   },
 ];
 
-const productCardData = [
+export const productCardData = [
   // Action/Fighting
   {
     id: 1,
-    image: "mortalKombat11",
+    image: mortalKombat11,
     title: "Mortal Kombat 11",
     description:
       "Engage in brutal hand-to-hand combat with iconic characters from the Mortal Kombat universe.",
@@ -316,7 +317,7 @@ const productCardData = [
   },
   {
     id: 2,
-    image: "streetFighterV",
+    image: streetFighterV,
     title: "Street Fighter V",
     description:
       "Battle against players from around the world in this classic fighting game franchise.",
@@ -325,7 +326,7 @@ const productCardData = [
   },
   {
     id: 3,
-    image: "tekken7",
+    image: tekken7,
     title: "Tekken 7",
     description:
       "Master the art of combat in this fast-paced 3D fighting game.",
@@ -336,7 +337,7 @@ const productCardData = [
   // Historical Strategy
   {
     id: 4,
-    image: "crusaderKings3",
+    image: crusaderKings3,
     title: "Crusader Kings III",
     description:
       "Lead your dynasty to greatness in this grand strategy game set in the Middle Ages.",
@@ -345,7 +346,7 @@ const productCardData = [
   },
   {
     id: 5,
-    image: "civilizationVI",
+    image: civilizationVI,
     title: "Civilization VI",
     description:
       "Build and expand your empire, and guide your civilization from ancient times to the space age.",
@@ -354,7 +355,7 @@ const productCardData = [
   },
   {
     id: 6,
-    image: "ageOfEmpires4",
+    image: ageOfEmpires4,
     title: "Age of Empires IV",
     description:
       "Command mighty civilizations and engage in epic real-time strategy battles.",
@@ -365,7 +366,7 @@ const productCardData = [
   // Sci-Fi/Exploration
   {
     id: 7,
-    image: "noMansSky",
+    image: noMansSky,
     title: "No Man's Sky",
     description:
       "Explore a vast procedurally generated universe filled with unique planets and lifeforms.",
@@ -374,7 +375,7 @@ const productCardData = [
   },
   {
     id: 8,
-    image: "eliteDangerous",
+    image: eliteDangerous,
     title: "Elite Dangerous",
     description:
       "Embark on a spacefaring adventure in a realistic 1:1 scale Milky Way galaxy.",
@@ -383,7 +384,7 @@ const productCardData = [
   },
   {
     id: 9,
-    image: "starCitizen",
+    image: starCitizen,
     title: "Star Citizen",
     description:
       "Experience a groundbreaking space sim with unparalleled immersion and player interaction.",
@@ -394,7 +395,7 @@ const productCardData = [
   // Superhero/Action
   {
     id: 10,
-    image: "spidermanMilesMorales",
+    image: spidermanMilesMorales,
     title: "Spider-Man: Miles Morales",
     description:
       "Swing through the streets of New York City as Miles Morales, the new Spider-Man.",
@@ -403,7 +404,7 @@ const productCardData = [
   },
   {
     id: 11,
-    image: "batmanArkhamKnight",
+    image: batmanArkhamKnight,
     title: "Batman: Arkham Knight",
     description:
       "Become the Dark Knight and protect Gotham City from the Scarecrow and the Arkham Knight.",
@@ -412,7 +413,7 @@ const productCardData = [
   },
   {
     id: 12,
-    image: "captainAcorn",
+    image: captainAcorn,
     title: "Captain Acorn: The First Avenger",
     description:
       "Join Captain Acorn, the shield-wielding squirrel, on a mission to protect the forest from the evil Dr. Nutcracker.",
@@ -423,7 +424,7 @@ const productCardData = [
   // Adventure/Exploration
   {
     id: 13,
-    image: "horizonZeroDawn",
+    image: horizonZeroDawn,
     title: "Horizon Zero Dawn",
     description:
       "Discover a captivating post-apocalyptic world ruled by machines, where nature has reclaimed the ruins of the past.",
@@ -432,7 +433,7 @@ const productCardData = [
   },
   {
     id: 14,
-    image: "theWitcher3",
+    image: theWitcher3,
     title: "The Witcher 3: Wild Hunt",
     description:
       "Embark on an epic journey as Geralt of Rivia, a monster hunter known as a Witcher.",
@@ -441,7 +442,7 @@ const productCardData = [
   },
   {
     id: 15,
-    image: "assassinsCreedValhalla",
+    image: assassinsCreedValhalla,
     title: "Assassin's Creed Valhalla",
     description:
       "Become a Viking raider and lead your clan to glory in a vast open world set in the Viking Age.",

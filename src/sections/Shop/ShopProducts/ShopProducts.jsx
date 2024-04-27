@@ -1,6 +1,6 @@
 import "./ShopProducts.scss";
 import { ProductCard } from "../../../components";
-import { gameCategories } from "../../../constants";
+import { gameCategories, productCardData } from "../../../constants";
 import { Select, MenuItem } from "@mui/material";
 
 const ShopProducts = () => {
@@ -23,11 +23,15 @@ const ShopProducts = () => {
       </div>
       {/* CARDS  */}
       <div className="shopProducts__cards">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {productCardData.map((item) => (
+          <ProductCard
+            key={`product-card-${item.title}`}
+            title={item.title}
+            image={item.image}
+            description={item.description}
+            price={item.price}
+          />
+        ))}
       </div>
     </section>
   );

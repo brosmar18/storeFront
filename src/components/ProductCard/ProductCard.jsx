@@ -3,19 +3,16 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./ProductCard.scss";
 
-const ProductCard = () => {
+const ProductCard = ({ image, title, description, price }) => {
   return (
     <div className="productCard">
-      <img src={pikachu} alt="pikachu" />
+      <img src={image} alt={title} />
       <div className="productCard__footer">
         <div className="productCard__info">
-          <h3>Title</h3>
+          <h3>{title}</h3>
           <div className="price">
-            <p>
-              Embark on an epic journey as Geralt of Rivia, a monster hunter
-              known as a Witcher.
-            </p>
-            <p>$39.99</p>
+            <p>{description}</p>
+            <p>{price}</p>
           </div>
         </div>
         <div className="buttons">

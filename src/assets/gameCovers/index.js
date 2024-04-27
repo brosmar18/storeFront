@@ -22,7 +22,7 @@ import eliteDangerous from "./eliteDangerous.png";
 import starCitizen from "./starCitizen.png";
 import spidermanMilesMorales from "./spidermanMilesMorales.png";
 import batmanArkhamKnight from "./batmanArkhamKnight.png";
-import captainAcorn from "./marvelAvengers.png";
+import captainAcorn from "./captainAcorn.png";
 import horizonZeroDawn from "./horizonZeroDawn.png";
 import theWitcher3 from "./theWitcher3.png";
 import assassinsCreedValhalla from "./assassinsCreedValhalla.png";
