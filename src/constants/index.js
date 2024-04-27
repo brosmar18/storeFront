@@ -19,7 +19,10 @@ import {
   starCitizen,
   spidermanMilesMorales,
   batmanArkhamKnight,
-  captainSquirrel,
+  captainAcorn,
+  horizonZeroDawn,
+  theWitcher3,
+  assassinsCreedValhalla,
 } from "../assets/gameCovers";
 
 export const navTopLinks = [
