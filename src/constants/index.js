@@ -17,6 +17,9 @@ import {
   ageOfEmpires4,
   eliteDangerous,
   starCitizen,
+  spidermanMilesMorales,
+  batmanArkhamKnight,
+  captainSquirrel,
 } from "../assets/gameCovers";
 
 export const navTopLinks = [
@@ -406,10 +409,10 @@ const productCardData = [
   },
   {
     id: 12,
-    image: "marvelAvengers",
-    title: "Marvel's Avengers",
+    image: "captainAcorn",
+    title: "Captain Acorn: The First Avenger",
     description:
-      "Assemble your team of Earth's Mightiest Heroes and defend the world from threats.",
+      "Join Captain Acorn, the shield-wielding squirrel, on a mission to protect the forest from the evil Dr. Nutcracker.",
     price: 39.99,
     category: "Superhero/Action",
   },

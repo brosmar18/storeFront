@@ -20,6 +20,12 @@ import ageOfEmpires4 from "./ageOfEmpires4.png";
 import noMansSky from "./noMansSky.png";
 import eliteDangerous from "./eliteDangerous.png";
 import starCitizen from "./starCitizen.png";
+import spidermanMilesMorales from "./spidermanMilesMorales.png";
+import batmanArkhamKnight from "./batmanArkhamKnight.png";
+import captainAcorn from "./marvelAvengers.png";
+import horizonZeroDawn from "./horizonZeroDawn.png";
+import theWitcher3 from "./theWitcher3.png";
+import assassinsCreedValhalla from "./assassinsCreedValhalla.png";
 
 export {
   fatality,
@@ -44,4 +50,10 @@ export {
   noMansSky,
   eliteDangerous,
   starCitizen,
+  spidermanMilesMorales,
+  batmanArkhamKnight,
+  captainAcorn,
+  horizonZeroDawn,
+  theWitcher3,
+  assassinsCreedValhalla,
 };
