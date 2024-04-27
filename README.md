@@ -11,6 +11,7 @@ Create a user-friendly and visually appealing web application that allows users 
 ### Links and Resources
 
 - Main Branch [Deployment](https://store-front-three-iota.vercel.app/)
+- Redux Features [Shop Page](https://store-front-three-iota.vercel.app/shop)
 
 ### Collaborators
 
