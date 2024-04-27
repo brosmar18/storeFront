@@ -32,7 +32,11 @@ A .env file is included in local repository. A .env-sample file is uploaed to th
 
 This e-commerce application incorporates the following key features:
 
-- **Redux for State Management**: The application utilizes Redux to efficiently manage the state of categories and products. Redux allows for a centralized store that holds the application state, making it easier to manage and update data across different components. The Redux store is configured using `configureStore` from the `@reduxjs/toolkit` library, and the reducers for categories and products are combined using `combineReducers`.
+- **Redux for State Management**: The application utilizes Redux to efficiently manage the state of categories, products, and the shopping cart. Redux allows for a centralized store that holds the application state, making it easier to manage and update data across different components. The Redux store is created using the `createStore` function from the `redux` library, and the root reducer is passed to it, combining the reducers for categories, products, and the cart.
+
+- **Shopping Cart Functionality**: The application includes a shopping cart feature that allows users to add products to their cart. When a user clicks the "Add to Cart" button on a product card, the `addToCart` action is dispatched, adding the selected product to the cart state in the Redux store. The cart state maintains an array of the added products.
+
+- **Cart Count and Total Price**: The application displays the count of items in the cart and the total price of the cart in the navbar. The cart count is derived from the length of the `items` array in the cart state, and the total price is calculated by summing the prices of all the products in the cart. The `updateTotalPrice` action is dispatched whenever an item is added to the cart to keep the total price up to date.
 
 - **Material UI for UI Components**: The application leverages Material UI, a popular React UI framework, to create a visually appealing and responsive user interface. Material UI provides a wide range of pre-built components, such as `Box`, `Stack`, `Typography`, `Grid`, `Button`, `Card`, and more, which are used throughout the application to create a consistent and polished look.
 
@@ -44,9 +48,9 @@ This e-commerce application incorporates the following key features:
 
 - **Product Card**: Each product is displayed using the `ProductCard` component, which utilizes Material UI's `Card`, `CardContent`, `Typography`, `IconButton`, and `Button` components. The product card showcases the product name, description, price, inventory count, and provides an "Add to Cart" button and a favorite icon.
 
-- **Redux Slices**: The application organizes the Redux state using slices, which are created using the `createSlice` function from the `@reduxjs/toolkit` library. The `categoriesSlice` manages the state related to categories, including the list of categories and the active category. The `productsSlice` handles the state for the list of products.
+- **Redux Actions and Reducers**: The application defines Redux actions and reducers to manage the state of categories, products, and the cart. The actions, such as `setActiveCategory`, `addToCart`, and `updateTotalPrice`, are dispatched to modify the state in the Redux store. The reducers handle these actions and update the corresponding parts of the state accordingly.
 
-These features collectively contribute to creating an intuitive and visually appealing e-commerce application that allows users to browse products by categories, view product details, and interact with the application seamlessly.
+These features collectively contribute to creating an intuitive and visually appealing e-commerce application that allows users to browse products by categories, view product details, add items to the cart, and keep track of the cart count and total price.
 
 ## Tests
 
@@ -66,5 +70,6 @@ At this stage, all essential component tests have been implemented. Any future t
 
 ![Diagram](./src/assets/storeFrontUML.png);
 
-### Figma Design 
+### Figma Design
+
 ![Design File](./src/assets/figmaDesign/gameSiteDesign.png)
