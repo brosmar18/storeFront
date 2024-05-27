@@ -1,9 +1,25 @@
-import React from "react";
+import {
+  Categories,
+  Deals,
+  Footer,
+  Games,
+  Header,
+  Install,
+  Popular,
+} from "./sections";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="bg-primary-darkBlue min-h-screen">
+      <Header />
+      <main className="max-w-screen-xl mx-auto bg-white">
+        <Games />
+        <Categories />
+        <Popular />
+        <Deals />
+        <Install />
+      </main>
+      <Footer />
     </div>
   );
 };
