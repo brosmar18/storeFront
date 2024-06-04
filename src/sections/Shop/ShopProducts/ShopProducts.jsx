@@ -3,12 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   setActiveCategory,
   setCategories,
-} from "../../../store/actions/categoryActions";
-import {
-  filterProducts,
-  setProducts,
-} from "../../../store/actions/productActions";
-import { addToCart } from "../../../store/actions/cartActions";
+} from "../../../store/categoryReducer";
+import { setProducts, filterProducts } from "../../../store/productReducer";
+import { addToCart } from "../../../store/cartReducer";
 import { Select, MenuItem } from "@mui/material";
 import { ProductCard } from "../../../components";
 import "./ShopProducts.scss";

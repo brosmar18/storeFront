@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { addToCart, updateTotalPrice } from "../../store/actions/cartActions";
+import { addToCart, updateTotalPrice } from "../../store/cartReducer";
 import "./ProductCard.scss";
 
 const ProductCard = ({ image, title, description, price, onAddToCart }) => {
