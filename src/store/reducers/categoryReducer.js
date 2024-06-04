@@ -1,16 +1,19 @@
-import { gameCategories } from '../../constants';
-
 const initialState = {
-  categories: gameCategories,
-  activeCategory: 'all',
+  categories: [],
+  activeCategory: "all",
 };
 
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_ACTIVE_CATEGORY':
+    case "SET_ACTIVE_CATEGORY":
       return {
         ...state,
         activeCategory: action.payload,
+      };
+    case "SET_CATEGORIES":
+      return {
+        ...state,
+        categories: action.payload,
       };
     default:
       return state;

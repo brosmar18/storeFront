@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setActiveCategory } from "../../../store/actions/categoryActions";
-import { filterProducts } from "../../../store/actions/productActions";
+import {
+  setActiveCategory,
+  setCategories,
+} from "../../../store/actions/categoryActions";
+import {
+  filterProducts,
+  setProducts,
+} from "../../../store/actions/productActions";
 import { addToCart } from "../../../store/actions/cartActions";
 import { Select, MenuItem } from "@mui/material";
 import { ProductCard } from "../../../components";
@@ -14,9 +20,30 @@ const ShopProducts = () => {
   );
   const { filteredProducts } = useSelector((state) => state.products);
 
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const res = await fetch("https://fakestoreapi.com/products/categories");
+      const data = await res.json();
+      dispatch(setCategories(["all", ...data]));
+    };
+
+    const fetchProducts = async () => {
+      const res = await fetch("https://fakestoreapi.com/products");
+      const data = await res.json();
+      dispatch(setProducts(data));
+      dispatch(filterProducts(activeCategory));
+    };
+
+    fetchCategories();
+    fetchProducts();
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(filterProducts(activeCategory));
+  }, [activeCategory, dispatch]);
+
   const handleCategoryChange = (category) => {
     dispatch(setActiveCategory(category));
-    dispatch(filterProducts(category));
   };
 
   const handleAddToCart = (product) => {
@@ -25,11 +52,10 @@ const ShopProducts = () => {
 
   return (
     <section className="shopProducts">
-      {/* HEADER */}
       <div className="shopProducts__heading">
         <div className="shopProducts__heading-title">
           <p className="subTitle">By Category</p>
-          <h2>Our Games</h2>
+          <h2>Our Products</h2>
         </div>
         <div className="shopProducts__categories">
           <Select
@@ -37,21 +63,19 @@ const ShopProducts = () => {
             onChange={(e) => handleCategoryChange(e.target.value)}
             className="category-select"
           >
-            <MenuItem value="all">Categories</MenuItem>
-            {categories.map((category) => (
-              <MenuItem key={category.id} value={category.category}>
-                {category.category}
+            {categories.map((category, index) => (
+              <MenuItem key={index} value={category}>
+                {category}
               </MenuItem>
             ))}
           </Select>
         </div>
       </div>
 
-      {/* CARDS */}
       <div className="shopProducts__cards">
         {filteredProducts.map((product) => (
           <ProductCard
-            key={`product-card-${product.title}`}
+            key={`product-card-${product.id}`}
             title={product.title}
             image={product.image}
             description={product.description}

@@ -1,8 +1,6 @@
-import { productCardData } from "../../constants";
-
 const initialState = {
-  products: productCardData,
-  filteredProducts: productCardData,
+  products: [],
+  filteredProducts: [],
 };
 
 const productReducer = (state = initialState, action) => {
@@ -18,20 +16,11 @@ const productReducer = (state = initialState, action) => {
         ...state,
         filteredProducts,
       };
-    case "DECREASE_STOCK":
-      const updatedProducts = state.products.map((product) => {
-        if (product.id === action.payload) {
-          return {
-            ...product,
-            inventory: product.inventory - 1,
-          };
-        }
-        return product;
-      });
+    case "SET_PRODUCTS":
       return {
         ...state,
-        products: updatedProducts,
-        filteredProducts: updatedProducts,
+        products: action.payload,
+        filteredProducts: action.payload,
       };
     default:
       return state;

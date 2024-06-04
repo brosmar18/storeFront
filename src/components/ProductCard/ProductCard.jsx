@@ -4,7 +4,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { addToCart, updateTotalPrice } from "../../store/actions/cartActions";
 import "./ProductCard.scss";
 
-const ProductCard = ({ image, title, description, price }) => {
+const ProductCard = ({ image, title, description, price, onAddToCart }) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
